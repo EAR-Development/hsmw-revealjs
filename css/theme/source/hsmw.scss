@@ -13,7 +13,6 @@
 // ---------------------------------------------
 
 
-
 // Include theme-specific fonts
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
@@ -41,3 +40,44 @@ section.has-dark-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+section{
+	top:0;
+}
+section:before {
+content: '';
+width: 31%;
+height: 100%;
+display: block;
+background: url(img/top_right.png);
+background-repeat: no-repeat;
+background-size: contain;
+position: fixed;
+top: 0;
+right: 0;
+}
+
+section:after {
+content: '';
+width: 31%;
+height: 18.5%;
+display: block;
+background: url(img/bottom_right.png);
+background-repeat: no-repeat;
+background-size: contain;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+body{
+	background-color: #000;
+}
+
+.reveal .slides{
+	background-color: #aaa;
+	section{
+	height: 100%;
+	padding:0;
+	}
+}
