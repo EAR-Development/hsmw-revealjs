@@ -44,30 +44,49 @@ section.has-dark-background {
 section{
 	top:0;
 }
-section:before {
+section.title:before {
 content: '';
-width: 31%;
-height: 100%;
+width: 100%;
+height: 31%;
 display: block;
-background: url(img/top_right.png);
+background: url(img/clean_top.png);
 background-repeat: no-repeat;
-background-size: contain;
+background-size: cover;
 position: fixed;
 top: 0;
 right: 0;
 }
 
-section:after {
+section.title.esf:before {
+background: url(img/esf_top.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+section.title:after {
 content: '';
 width: 31%;
 height: 18.5%;
 display: block;
 background: url(img/bottom_right.png);
 background-repeat: no-repeat;
-background-size: contain;
+background-size: cover;
 position: absolute;
 bottom: 0;
 right: 0;
+}
+
+section.content:after {
+content: '';
+height: 7%;
+width: 14%;
+display: block;
+background: url(img/logo.png);
+background-repeat: no-repeat;
+background-size: contain;
+position: absolute;
+bottom: 3%;
+right: 6%;
 }
 
 body{
@@ -75,9 +94,49 @@ body{
 }
 
 .reveal .slides{
-	background-color: #aaa;
-	section{
-	height: 100%;
-	padding:0;
+	section {
+		background-color: #fff;
+		height: 100%;
+		padding:0;
+	}
+	section.content{
+		&>p{
+			margin-left: 6%;
+			margin-right: 6%;
+			text-align: left;
+		}
+	}
+	section.title{
+		background-color: #e5f0f7;
+		h1, h2, .author{
+			position: absolute;
+			left: 6%;
+			margin: 0;
+			width: 42%;
+			text-align: left;
+		}
+		h1{
+			bottom: 42%;
+		}
+		h2{
+			top: 58%;
+			height: 15%;
+		}
+		.author{
+			top: 74%;
+			height: 11%;
+		}
+		.frontimage{
+			border: none;
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			background-image: url(img/background_mock.jpg);
+  			margin: 0;
+    		right: 0;
+    		color: rgba(0,0,0,0);
+			z-index: -1;
+			background-size: cover;
+		}
 	}
 }
