@@ -19,9 +19,9 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Lato', sans-serif;
-$mainColor: #000;
-$headingFont: 'News Cycle', Impact, sans-serif;
+$mainFont: 'Open Sans', sans-serif;
+$mainColor: rgb(10, 9, 9);
+$headingFont: 'Open Sans', Impact, sans-serif;
 $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
@@ -107,10 +107,21 @@ body{
 		padding:0;
 	}
 	section.content{
+		padding-top: 2%;
 		&>p{
 			margin-left: 6%;
 			margin-right: 6%;
 			text-align: left;
+		}
+		&>h1{
+			text-align: left;
+			margin-left: 6%;
+			margin-right: 6%;
+			font-size: 6.6vh;
+    		padding-bottom: 5.7vh;
+    		padding-top: 5.7vh;
+			height: 6.6vh;
+			font-weight: bold;
 		}
 	}
 	section.title{

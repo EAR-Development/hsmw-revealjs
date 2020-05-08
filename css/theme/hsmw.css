@@ -18,10 +18,10 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 40px;
   font-weight: normal;
-  color: #000; }
+  color: #0a0909; }
 
 ::selection {
   color: #fff;
@@ -49,7 +49,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: "News Cycle", Impact, sans-serif;
+  font-family: "Open Sans", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -233,7 +233,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #000;
+  border: 4px solid #0a0909;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -332,10 +332,21 @@ body {
   height: 100%;
   padding: 0; }
 
-.reveal .slides section.content > p {
-  margin-left: 6%;
-  margin-right: 6%;
-  text-align: left; }
+.reveal .slides section.content {
+  padding-top: 2%; }
+  .reveal .slides section.content > p {
+    margin-left: 6%;
+    margin-right: 6%;
+    text-align: left; }
+  .reveal .slides section.content > h1 {
+    text-align: left;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-size: 6.6vh;
+    padding-bottom: 5.7vh;
+    padding-top: 5.7vh;
+    height: 6.6vh;
+    font-weight: bold; }
 
 .reveal .slides section.title {
   background-color: #e5f0f7; }
