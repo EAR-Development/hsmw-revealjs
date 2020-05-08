@@ -70,17 +70,21 @@ right: 0%;
 margin: 0;
 }
 
-section.content:after {
-content: '';
-height: 7%;
-width: 14%;
-display: block;
-background: url(img/logo.png);
-background-repeat: no-repeat;
-background-size: contain;
-position: absolute;
-bottom: 3%;
-right: 6%;
+div.footer-content{
+	height: 10vh;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+	bottom: 0%;
+	.hsmw-logo{
+		background: url(img/logo.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: relative;
+		bottom: 6vh;
+		right: -84vw;
+		height: 6vh;
+	}
 }
 
 body{
