@@ -44,6 +44,7 @@ section.has-dark-background {
 section{
 	top:0;
 }
+
 section.title:before {
 content: '';
 width: 100%;
@@ -61,6 +62,12 @@ section.title.esf:before {
 background: url(img/esf_top.png);
 background-repeat: no-repeat;
 background-size: cover;
+}
+
+section.title.esf.present:before {
+	background: url(img/esf_top.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 section.title:after {

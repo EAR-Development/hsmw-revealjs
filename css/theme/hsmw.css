@@ -295,6 +295,11 @@ section.title.esf:before {
   background-repeat: no-repeat;
   background-size: cover; }
 
+section.title.esf.present:before {
+  background: url(img/esf_top.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 section.title:after {
   content: '';
   width: 31%;
