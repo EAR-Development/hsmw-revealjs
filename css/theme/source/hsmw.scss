@@ -71,19 +71,67 @@ margin: 0;
 }
 
 div.footer-content{
-	height: 10vh;
+    height: 7%;
     margin: 0;
-    width: 100%;
+    width: 88%;
     position: absolute;
-	bottom: 0%;
-	.hsmw-logo{
-		background: url(img/logo.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		position: relative;
-		bottom: 6vh;
-		right: -84vw;
-		height: 6vh;
+    margin-left: 6%;
+    margin-right: 6%;
+    bottom: 3%;
+	overflow: hidden;	
+	
+	.image-wrapper{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 80%;
+        &>img{
+            padding: 0 0 0 20px;
+            margin: 0;
+            border: 0;
+            vertical-align: bottom;
+            box-shadow: none;
+            height:100%;
+            border-left: 2px solid #3465a4;
+        }
+	}
+
+	.left-info{
+        color: #3465a4;
+        font-size: 20px;
+		position: absolute;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		.pagenumber{
+			position: absolute;
+			left: 0;
+			font-size: 28px;
+			bottom: 15%;
+		}
+		.title{
+			position: absolute;
+			font-weight: bold;
+			left: 15%;
+			bottom: 24%;
+		}
+		.copyright{
+			position: absolute;
+			left: 15%;
+			bottom: 0%;
+			color: gray;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+	
+	.institute-tag{
+		font-size: 20px;
+		font-weight: bold;
+		color: #3465a4;
+		position: absolute;
+		right: 16%;
+		top: 41%;
 	}
 }
 
