@@ -22,12 +22,21 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+
+	<script>
+		var AUTHOR = "Max MachineLearning";
+		var TITLE = "GMLVQ for cheese classification";
+		var SUBTITLE = "A study with holes"
+	</script>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
 			<section data-markdown="slides/title.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="utf-8">
+			</section>
+			<section data-markdown="slides/content.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
 				data-separator-notes="^Note:" data-charset="utf-8">
 			</section>
 			<section data-markdown="slides/content.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
@@ -77,8 +86,9 @@
 			<div class='footer-content'>
 				<div class='left-info'>
 					<div class="pagenumber">2</div>
-					<div class="title">Titel/Kapitel | Redner oder Autor</div>
-					<div class="copyright">(c) 01.03.2020 Hochschule Mittweida</div>
+					<div class="title"><span class="placeholder-title"></span> | <span
+							class="placeholder-author"></span></div>
+					<div class="copyright">(c) <span class="placeholder-date"></span> Hochschule Mittweida</div>
 				</div>
 
 				<div class="institute-tag">
@@ -98,11 +108,38 @@
 		// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
 		var header = $('#header').html();
 		Reveal.addEventListener('ready', function (event) {
+			// header and footer
+			// TODO: generalize
 			$('section.content').append(header);
 			$('section.title').prepend($('#header-title').html());
 			$('section.title').append($('#footer-title').html());
 			$('section.content').append($('#footer-content').html());
-		});
+			// slide numbers
+			$('.slides').children().each(function (sectionNumber, section) {
+				$(section).find('.pagenumber').text(sectionNumber)
+			})
+			// author and title
+			$('.placeholder-author').each(function (index, placeholder) {
+				$(placeholder).text(AUTHOR)
+			})
+			$('.placeholder-title').each(function (index, placeholder) {
+				$(placeholder).text(TITLE)
+			})
+			$('.placeholder-subtitle').each(function (index, placeholder) {
+				$(placeholder).text(SUBTITLE)
+			})
+			var date = new Date()
+			var datestring = date.toLocaleDateString('de-DE', {
+				year: "numeric",
+				month: "2-digit",
+				day: "2-digit",
+			})
+			$('.placeholder-date').each(function (index, placeholder) {
+				$(placeholder).text(datestring)
+			})
+
+
+		})
 	</script>
 
 </body>

@@ -173,14 +173,17 @@ body{
 		}
 		h1{
 			bottom: 42%;
+			font-size: 90px;
 		}
 		h2{
 			top: 58%;
 			height: 15%;
+			font-size: 60px;
 		}
 		.author{
 			top: 74%;
 			height: 11%;
+			font-size: 30px;
 		}
 		.frontimage{
 			border: none;
@@ -189,7 +192,8 @@ body{
 			position: absolute;
 			background-image: url(img/background_mock.jpg);
   			margin: 0;
-    		right: 0%;
+			right: 0%;
+			top: 0;
     		color: rgba(0,0,0,0);
 			background-size: cover;
 		}

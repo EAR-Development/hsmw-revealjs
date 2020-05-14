@@ -1,8 +1,8 @@
 <!-- .slide: class="title esf" -->
-# Title
+<h1 class="placeholder-title">TITLE</h1>
 
-## Subtitle
+<h2 class="placeholder-subtitle">TITLE</h2>
 
-Author Name <!-- .element: class="author" -->
+<span>AUTHOR NAME</span> <!-- .element: class="author placeholder-author" -->
 
 image <!-- .element: class="frontimage" -->

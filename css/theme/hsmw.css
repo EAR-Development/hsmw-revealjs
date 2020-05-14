@@ -387,13 +387,16 @@ body {
     width: 42%;
     text-align: left; }
   .reveal .slides section.title h1 {
-    bottom: 42%; }
+    bottom: 42%;
+    font-size: 90px; }
   .reveal .slides section.title h2 {
     top: 58%;
-    height: 15%; }
+    height: 15%;
+    font-size: 60px; }
   .reveal .slides section.title .author {
     top: 74%;
-    height: 11%; }
+    height: 11%;
+    font-size: 30px; }
   .reveal .slides section.title .frontimage {
     border: none;
     width: 50%;
@@ -402,5 +405,6 @@ body {
     background-image: url(img/background_mock.jpg);
     margin: 0;
     right: 0%;
+    top: 0;
     color: rgba(0, 0, 0, 0);
     background-size: cover; }
