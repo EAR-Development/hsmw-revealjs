@@ -13,8 +13,10 @@
 
 	<script>
 		var AUTHOR = "Max MachineLearning";
+		var POSITION = "PhD Student";
+		var EMAIL = "maxmachinelearning@hs-mittweida.de";
 		var TITLE = "GMLVQ for cheese classification";
-		var SUBTITLE = "A study with holes"
+		var SUBTITLE = "A study with holes";
 	</script>
 </head>
 
@@ -28,6 +30,9 @@
 				data-separator-notes="^Note:" data-charset="utf-8">
 			</section>
 			<section data-markdown="slides/content.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="utf-8">
+			</section>
+			<section data-markdown="slides/end.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
 				data-separator-notes="^Note:" data-charset="utf-8">
 			</section>
 		</div>
@@ -85,7 +90,15 @@
 				</div>
 			</div>
 		</div>
-
+		<div id="header-end">
+			<p class='header-end'>
+			</p>
+		</div>
+		<div id="footer-end">
+			<p class='footer-end'>
+			</p>
+		</div>
+		
 
 	</div>
 
@@ -100,6 +113,8 @@
 			$('section.title').prepend($('#header-title').html());
 			$('section.title').append($('#footer-title').html());
 			$('section.content').append($('#footer-content').html());
+			$('section.end').prepend($('#header-end').html());
+			$('section.end').append($('#footer-end').html());
 			// slide numbers
 			$('.slides').children().each(function (sectionNumber, section) {
 				$(section).find('.pagenumber').text(sectionNumber)
@@ -107,6 +122,12 @@
 			// author and title
 			$('.placeholder-author').each(function (index, placeholder) {
 				$(placeholder).text(AUTHOR)
+			})
+			$('.placeholder-position').each(function (index, placeholder) {
+				$(placeholder).text(POSITION)
+			})
+			$('.placeholder-email').each(function (index, placeholder) {
+				$(placeholder).text(EMAIL)
 			})
 			$('.placeholder-title').each(function (index, placeholder) {
 				$(placeholder).text(TITLE)
