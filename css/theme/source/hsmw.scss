@@ -58,8 +58,8 @@ p.header-title {
 }
 
 p.footer-title{
-width: 31%;
-height: 18.5%;
+width: 34%;
+height: 20%;
 display: block;
 background: url(img/bottom_right.png);
 background-repeat: no-repeat;
@@ -135,6 +135,34 @@ div.footer-content{
 	}
 }
 
+p.header-end {
+	width: 34%;
+	height: 31%;
+	display: block;
+	background: url(img/top_right_white.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 0%;
+	top: 0%;
+	margin: 0%;
+	z-index: 1;
+}
+
+p.footer-end{
+	width: 34%;
+	height: 20%;
+	display: block;
+	background: url(img/bottom_right_hsmw.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	margin: 0;
+	}
+
+
 body{
 	background-color: #FFF;
 }
@@ -196,6 +224,48 @@ body{
 			top: 0;
     		color: rgba(0,0,0,0);
 			background-size: cover;
+		}
+	}
+	section.end{
+		background-image: url(img/background_cube.png);
+		background-size: cover;
+
+		h1, h2, h3, h4, .author{
+			color: #fff;
+			position: absolute;
+			left: 6%;
+			margin: 0;
+			width: 42%;
+			text-align: left;
+		}
+		h1{
+			font-weight: bold;
+			bottom: 52%;
+			font-size: 110px;
+		}
+
+		h2{
+			top: 52%;
+			height: 15%;
+			font-size: 30px;
+		}
+
+		h3{
+			top: 56%;
+			height: 15%;
+			font-size: 30px;
+		}
+
+		h4{
+			top: 62%;
+			height: 15%;
+			font-size: 20px;
+		}
+
+		.author{
+			top: 74%;
+			height: 11%;
+			font-size: 30px;
 		}
 	}
 }
