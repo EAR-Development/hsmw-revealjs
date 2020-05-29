@@ -7,21 +7,9 @@
 
 	<title>reveal.js</title>
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/hsmw.css">
-
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/monokai.css">
-
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/hsmw.css" id="theme">
 
 	<script>
 		var AUTHOR = "Max MachineLearning";
@@ -45,12 +33,15 @@
 		</div>
 	</div>
 
-	<script src="js/reveal.js"></script>
 
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
 	<script>
-		// More info about config & dependencies:
-		// - https://github.com/hakimel/reveal.js#configuration
-		// - https://github.com/hakimel/reveal.js#dependencies
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
 			width: 1920,
@@ -58,15 +49,10 @@
 			center: false,
 			margin: 0,
 
-			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/highlight/highlight.js' },
-				{ src: 'plugin/notes/notes.js', async: true }
-			]
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
 	</script>
-
 	<div id="hidden" style='display:none'>
 
 		<div id="header-title">
@@ -95,7 +81,7 @@
 					SICIM - Theory and Application
 				</div>
 				<div class='image-wrapper'>
-					<img src="css/theme/img/logo.png">
+					<img src="dist/theme/img/logo.png">
 				</div>
 			</div>
 		</div>
@@ -141,7 +127,6 @@
 
 		})
 	</script>
-
 </body>
 
 </html>
