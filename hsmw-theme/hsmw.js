@@ -36,7 +36,10 @@ Reveal.initialize({
 	
 	pdfMaxPagesPerSlide: 1,
 
-    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+	mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+	config: 'TeX-AMS_HTML-full',
+
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
 });
 
 HEADER_AND_FOOTER = {
