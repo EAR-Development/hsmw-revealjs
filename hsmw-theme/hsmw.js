@@ -12,7 +12,7 @@ function template(strings, ...keys) {
     });
   }
 
-make_slide = template`<section data-markdown="slides/${0}.md" data-separator="^ \\n\\n\\n" data-separator-vertical="^\\n\\n" data-separator-notes="^Note:" data-charset="utf-8"></section>`
+make_slide = template`<section data-markdown="${0}/${1}.md" data-separator="^ \\n\\n\\n" data-separator-vertical="^\\n\\n" data-separator-notes="^Note:" data-charset="utf-8"></section>`
 
 $('body').append(`
   	<div class="reveal">
@@ -21,16 +21,20 @@ $('body').append(`
 	</div
 `)
 
+$('.slides').append(make_slide('hsmw-theme', 'title'))
 for (slide of SLIDES){
-    $('.slides').append(make_slide(slide))
+    $('.slides').append(make_slide('slides', slide))
 }
+$('.slides').append(make_slide('hsmw-theme', 'end'))
 
 Reveal.initialize({
     hash: true,
     width: 1920,
     height: 1080,
     center: false,
-    margin: 0,
+	margin: 0,
+	
+	pdfMaxPagesPerSlide: 1,
 
     plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 });
@@ -38,7 +42,7 @@ Reveal.initialize({
 HEADER_AND_FOOTER = {
     "title" : {
         "header" : `
-            <p class='header-title'>
+            <p class='header-title no-esf'>
 			</p>
         `,
         "footer" : `
@@ -82,9 +86,13 @@ HEADER_AND_FOOTER = {
 Reveal.addEventListener('ready', function (event) {
 	// header and footer
     for (template in HEADER_AND_FOOTER) {
-	    $('section.' + template).prepend(HEADER_AND_FOOTER[template]['header']);
+		$('section.' + template).prepend(HEADER_AND_FOOTER[template]['header']);
 	    $('section.' + template).append(HEADER_AND_FOOTER[template]['footer']);
-    }
+	}
+	
+	if (ESF){
+		$('.no-esf').toggleClass('no-esf').toggleClass('esf')
+	}
 
 
 	// slide numbers

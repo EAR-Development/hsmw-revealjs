@@ -6,3 +6,5 @@
 <h3 class="placeholder-position">POSITION</h3>
 
 <h4 class="placeholder-email">EMAIL</h4>
+
+image <!-- .element: class="endimage" -->

@@ -291,15 +291,20 @@ section {
   top: 0; }
 
 p.header-title {
-  background: url(img/esf_top.png);
-  background-repeat: no-repeat;
-  background-size: contain;
   position: absolute;
   height: 35%;
   width: 100%;
   top: 0%;
   margin: 0%;
   z-index: 1; }
+  p.header-title.esf {
+    background: url(img/esf_top.png);
+    background-repeat: no-repeat;
+    background-size: contain; }
+  p.header-title.no-esf {
+    background: url(img/clean_top.png);
+    background-repeat: no-repeat;
+    background-size: contain; }
 
 p.footer-title {
   width: 34%;
@@ -446,33 +451,49 @@ body {
     color: rgba(0, 0, 0, 0);
     background-size: cover; }
 
-.reveal .slides section.end {
+.reveal .slides section.end h1, .reveal .slides section.end h2, .reveal .slides section.end h3, .reveal .slides section.end h4, .reveal .slides section.end .author {
+  color: #fff;
+  position: absolute;
+  left: 6%;
+  margin: 0;
+  width: 42%;
+  text-align: left;
+  z-index: 1; }
+
+.reveal .slides section.end h1 {
+  font-weight: bold;
+  bottom: 52%;
+  font-size: 110px; }
+
+.reveal .slides section.end h2 {
+  top: 52%;
+  height: 15%;
+  font-size: 30px; }
+
+.reveal .slides section.end h3 {
+  top: 56%;
+  height: 15%;
+  font-size: 30px; }
+
+.reveal .slides section.end h4 {
+  top: 62%;
+  height: 15%;
+  font-size: 20px; }
+
+.reveal .slides section.end .author {
+  top: 74%;
+  height: 11%;
+  font-size: 30px; }
+
+.reveal .slides section.end .endimage {
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   background-image: url(img/background_cube.png);
-  background-size: cover; }
-  .reveal .slides section.end h1, .reveal .slides section.end h2, .reveal .slides section.end h3, .reveal .slides section.end h4, .reveal .slides section.end .author {
-    color: #fff;
-    position: absolute;
-    left: 6%;
-    margin: 0;
-    width: 42%;
-    text-align: left; }
-  .reveal .slides section.end h1 {
-    font-weight: bold;
-    bottom: 52%;
-    font-size: 110px; }
-  .reveal .slides section.end h2 {
-    top: 52%;
-    height: 15%;
-    font-size: 30px; }
-  .reveal .slides section.end h3 {
-    top: 56%;
-    height: 15%;
-    font-size: 30px; }
-  .reveal .slides section.end h4 {
-    top: 62%;
-    height: 15%;
-    font-size: 20px; }
-  .reveal .slides section.end .author {
-    top: 74%;
-    height: 11%;
-    font-size: 30px; }
+  margin: 0;
+  right: 0%;
+  top: 0;
+  color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  z-index: 0; }
