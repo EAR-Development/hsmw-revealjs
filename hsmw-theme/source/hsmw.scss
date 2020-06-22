@@ -8,8 +8,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
+@import "template/mixins";
+@import "template/settings";
 // ---------------------------------------------
 
 
@@ -38,7 +38,7 @@ section.has-dark-background {
 
 
 // Theme template ------------------------------
-@import "../template/theme";
+@import "template/theme";
 // ---------------------------------------------
 
 section{
@@ -46,9 +46,16 @@ section{
 }
 
 p.header-title {
-	background: url(img/esf_top.png);
-	background-repeat: no-repeat;
-	background-size: contain;
+	&.esf {
+		background: url(img/esf_top.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	&.no-esf {
+		background: url(img/clean_top.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 	position: absolute;
 	height: 35%;
 	width: 100%;
@@ -227,9 +234,6 @@ body{
 		}
 	}
 	section.end{
-		background-image: url(img/background_cube.png);
-		background-size: cover;
-
 		h1, h2, h3, h4, .author{
 			color: #fff;
 			position: absolute;
@@ -237,6 +241,7 @@ body{
 			margin: 0;
 			width: 42%;
 			text-align: left;
+			z-index: 1;
 		}
 		h1{
 			font-weight: bold;
@@ -266,6 +271,20 @@ body{
 			top: 74%;
 			height: 11%;
 			font-size: 30px;
+		}
+		
+		.endimage{
+			border: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-image: url(img/background_cube.png);
+  			margin: 0;
+			right: 0%;
+			top: 0;
+    		color: rgba(0,0,0,0);
+			background-size: cover;
+			z-index: 0;
 		}
 	}
 }

@@ -5,149 +5,40 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>HSMW - Präsentation</title>
 
-	<link rel="stylesheet" href="dist/reset.css">
-	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/hsmw.css" id="theme">
+	<link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
 
+	<link rel="stylesheet" href="hsmw-theme/hsmw.css" id="theme">
+
+	<script src="node_modules/reveal.js/dist/reveal.js"></script>
+	<script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+	<script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+	<script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+</head>
+<body>
+	<!-- CONFIGURATION -->
+	<!-- Only edit this part -->
+	<!-- ------------------------------------------------------------------------------------------------------------- -->
 	<script>
-		var AUTHOR = "Max MachineLearning";
+		var AUTHOR = "Max MachineLearninger";
 		var POSITION = "PhD Student";
+
+		var ESF = true
+
 		var EMAIL = "maxmachinelearning@hs-mittweida.de";
 		var TITLE = "GMLVQ for cheese classification";
 		var SUBTITLE = "A study with holes";
+
+		var SLIDES = [
+			"content",
+		]
 	</script>
-</head>
-
-<body>
-	<div class="reveal">
-		<div class="slides">
-			<section data-markdown="slides/title.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
-				data-separator-notes="^Note:" data-charset="utf-8">
-			</section>
-			<section data-markdown="slides/content.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
-				data-separator-notes="^Note:" data-charset="utf-8">
-			</section>
-			<section data-markdown="slides/content.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
-				data-separator-notes="^Note:" data-charset="utf-8">
-			</section>
-			<section data-markdown="slides/end.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
-				data-separator-notes="^Note:" data-charset="utf-8">
-			</section>
-		</div>
-	</div>
-
-
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		Reveal.initialize({
-			hash: true,
-			width: 1920,
-			height: 1080,
-			center: false,
-			margin: 0,
-
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-		});
-	</script>
-	<div id="hidden" style='display:none'>
-
-		<div id="header-title">
-			<p class='header-title'>
-			</p>
-		</div>
-		<div id="footer-title">
-			<p class='footer-title'>
-			</p>
-		</div>
-
-		<div id="header-content">
-			<p class='header-content'>
-			</p>
-		</div>
-		<div id="footer-content">
-			<div class='footer-content'>
-				<div class='left-info'>
-					<div class="pagenumber">2</div>
-					<div class="title"><span class="placeholder-title"></span> | <span
-							class="placeholder-author"></span></div>
-					<div class="copyright">(c) <span class="placeholder-date"></span> Hochschule Mittweida</div>
-				</div>
-
-				<div class="institute-tag">
-					SICIM - Theory and Application
-				</div>
-				<div class='image-wrapper'>
-					<img src="dist/theme/img/logo.png">
-				</div>
-			</div>
-		</div>
-		<div id="header-end">
-			<p class='header-end'>
-			</p>
-		</div>
-		<div id="footer-end">
-			<p class='footer-end'>
-			</p>
-		</div>
-		
-
-	</div>
-
+	<!-- ------------------------------------------------------------------------------------------------------------- -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript">
-		// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
-		var header = $('#header').html();
-		Reveal.addEventListener('ready', function (event) {
-			// header and footer
-			// TODO: generalize
-			$('section.content').append(header);
-			$('section.title').prepend($('#header-title').html());
-			$('section.title').append($('#footer-title').html());
-			$('section.content').append($('#footer-content').html());
-			$('section.end').prepend($('#header-end').html());
-			$('section.end').append($('#footer-end').html());
-			// slide numbers
-			$('.slides').children().each(function (sectionNumber, section) {
-				$(section).find('.pagenumber').text(sectionNumber)
-			})
-			// author and title
-			$('.placeholder-author').each(function (index, placeholder) {
-				$(placeholder).text(AUTHOR)
-			})
-			$('.placeholder-position').each(function (index, placeholder) {
-				$(placeholder).text(POSITION)
-			})
-			$('.placeholder-email').each(function (index, placeholder) {
-				$(placeholder).text(EMAIL)
-			})
-			$('.placeholder-title').each(function (index, placeholder) {
-				$(placeholder).text(TITLE)
-			})
-			$('.placeholder-subtitle').each(function (index, placeholder) {
-				$(placeholder).text(SUBTITLE)
-			})
-			var date = new Date()
-			var datestring = date.toLocaleDateString('de-DE', {
-				year: "numeric",
-				month: "2-digit",
-				day: "2-digit",
-			})
-			$('.placeholder-date').each(function (index, placeholder) {
-				$(placeholder).text(datestring)
-			})
-
-
-		})
-	</script>
+	<script src="hsmw-theme/hsmw.js"></script>
 </body>
+
 
 </html>
