@@ -29,5 +29,8 @@
     "yargs": "^15.1.0",
     "gulp-run-command": "0.0.10",
     "gulp-shell": "^0.8.0"
+  },
+  "dependencies": {
+    "reveal.js": "^4.0.2"
   }
 }
