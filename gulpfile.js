@@ -13,7 +13,7 @@ gulp.task('css-themes', () => gulp.src(['./hsmw-theme/source/*.{sass,scss}'])
         .pipe(sass())
         .pipe(gulp.dest('./hsmw-theme')))
 
-gulp.task('reload', () => gulp.src(['*.html', '*.md'])
+gulp.task('reload', () => gulp.src(['**/*.html', '**/*.md'])
     .pipe(connect.reload()));
 
 gulp.task('serve', () => {
@@ -24,7 +24,7 @@ gulp.task('serve', () => {
         livereload: true
     })
 
-    gulp.watch(['*.html', '*.md'], gulp.series('reload'))
+    gulp.watch(['**/*.html', '**/*.md'], gulp.series('reload'))
     
     gulp.watch([
         './hsmw-theme/source/*.{sass,scss}',
@@ -40,6 +40,6 @@ gulp.task('pdf', () => {
 
     return gulp
     .src('index.html', {'read':false})
-    .pipe(shell(['decktape http://0.0.0.0:8000/ output.pdf']))
+    .pipe(shell(['decktape http://0.0.0.0:'+port+' output.pdf']))
     .on('end', () => connect.serverClose())
 })
