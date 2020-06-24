@@ -52,6 +52,22 @@ HEADER_AND_FOOTER = {
             <p class='footer-title'>
             </p>
         `
+	},    
+	"chapter" : {
+        "header": `
+	    	<p class='header-chapter'>
+			</p>
+        `,
+        "footer": `
+   			<div class='footer-chapter'>
+    			<div class="institute-tag">
+    				SICIM - Theory and Application
+    			</div>
+    			<div class='image-wrapper'>
+    				<img src="hsmw-theme/img/logo.png">
+    			</div>
+    		</div>
+        `
     },
     "content" : {
         "header": `

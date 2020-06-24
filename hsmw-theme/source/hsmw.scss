@@ -77,7 +77,19 @@ right: 0%;
 margin: 0;
 }
 
-div.footer-content{
+p.header-chapter{
+	width: 67%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top: 0;
+	z-index: -1;
+	background-color: #0069b3;
+	padding: 0;
+	margin: 0;
+}
+
+div.footer-content, div.footer-chapter{
     height: 7%;
     margin: 0;
     width: 88%;
@@ -133,12 +145,12 @@ div.footer-content{
 	}
 	
 	.institute-tag{
-		font-size: 20px;
+		font-size: 15px;
 		font-weight: bold;
 		color: #3465a4;
 		position: absolute;
 		right: 16%;
-		top: 41%;
+		top: 46%;
 	}
 }
 
@@ -167,8 +179,7 @@ p.footer-end{
 	bottom: 0%;
 	right: 0%;
 	margin: 0;
-	}
-
+}
 
 body{
 	background-color: #FFF;
@@ -197,6 +208,27 @@ body{
 			font-weight: bold;
 		}
 	}
+	
+	section.chapter{
+		h1, h2, .author{
+			color: #fff;
+			position: absolute;
+			left: 6%;
+			margin: 0;
+			width: 42%;
+			text-align: left;
+		}
+		h1{
+			bottom: 42%;
+			font-size: 90px;
+		}
+		h2{
+			top: 58%;
+			height: 15%;
+			font-size: 60px
+		}
+	}
+
 	section.title{
 		background-color: #e5f0f7;
 		h1, h2, .author{
