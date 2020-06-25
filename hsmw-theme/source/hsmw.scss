@@ -154,6 +154,7 @@ div.footer-content, div.footer-chapter{
 	}
 }
 
+
 p.header-end {
 	width: 34%;
 	height: 31%;
@@ -186,26 +187,46 @@ body{
 }
 
 .reveal .slides{
+	ul {
+		margin: 0;
+		list-style: none;
+		padding-left: 0
+	}
+	ul ul {
+		margin-left: 0.5em;
+	}
+	ul ul ul{
+		font-size: 0.9em;
+	}
+	ul ul ul ul ul{
+		font-weight: bold;
+	}
+
+	li:before {
+		content: "-";
+		padding-right: 1em;
+		color: #0069b3;
+		font-weight: 100;
+
+	}
 	section {
+		text-align: left;
 		background-color: #fff;
 		height: 100%;
-		padding:0;
 	}
 	section.content{
+		padding: 0 6%;
+		box-sizing: border-box;;
 		&>p{
-			margin-left: 6%;
-			margin-right: 6%;
-			text-align: left;
 		}
 		&>h1{
 			text-align: left;
-			margin-left: 6%;
-			margin-right: 6%;
-			font-size: 6.6vh;
+			font-size: 90px;
     		padding-bottom: 5.7vh;
-    		padding-top: 7.7vh;
-			height: 6.6vh;
+    		padding-top: 30px;
+			height: 90px;
 			font-weight: bold;
+			color: #0069b3;
 		}
 	}
 	
@@ -219,10 +240,12 @@ body{
 			text-align: left;
 		}
 		h1{
+			font-weight: bold;
 			bottom: 42%;
-			font-size: 90px;
+			font-size: 100px;
 		}
 		h2{
+			font-weight: bold;
 			top: 58%;
 			height: 15%;
 			font-size: 60px
@@ -239,18 +262,23 @@ body{
 			text-align: left;
 		}
 		h1{
+			color: #0069b3;
+			font-weight: bold;
 			bottom: 42%;
 			font-size: 90px;
 		}
 		h2{
+			color: #0069b3;
+			font-weight: bold;
 			top: 58%;
 			height: 15%;
 			font-size: 60px;
 		}
 		.author{
+			font-weight: 100;
 			top: 74%;
 			height: 11%;
-			font-size: 30px;
+			font-size: 45px;
 		}
 		.frontimage{
 			border: none;

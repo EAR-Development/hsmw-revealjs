@@ -12,7 +12,7 @@ function template(strings, ...keys) {
     });
   }
 
-make_slide = template`<section data-markdown="${0}/${1}.md" data-separator="^ \\n\\n\\n" data-separator-vertical="^\\n\\n" data-separator-notes="^Note:" data-charset="utf-8"></section>`
+make_slide = template`<section data-markdown="${0}/${1}.md" data-separator="^---" data-separator-vertical="^\\n\\n" data-separator-notes="^Note:" data-charset="utf-8"></section>`
 
 $('body').append(`
   	<div class="reveal">

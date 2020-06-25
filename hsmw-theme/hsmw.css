@@ -411,25 +411,42 @@ p.footer-end {
 body {
   background-color: #FFF; }
 
-.reveal .slides section {
-  background-color: #fff;
-  height: 100%;
-  padding: 0; }
+.reveal .slides ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0; }
 
-.reveal .slides section.content > p {
-  margin-left: 6%;
-  margin-right: 6%;
-  text-align: left; }
+.reveal .slides ul ul {
+  margin-left: 0.5em; }
 
-.reveal .slides section.content > h1 {
-  text-align: left;
-  margin-left: 6%;
-  margin-right: 6%;
-  font-size: 6.6vh;
-  padding-bottom: 5.7vh;
-  padding-top: 7.7vh;
-  height: 6.6vh;
+.reveal .slides ul ul ul {
+  font-size: 0.9em; }
+
+.reveal .slides ul ul ul ul ul {
   font-weight: bold; }
+
+.reveal .slides li:before {
+  content: "-";
+  padding-right: 1em;
+  color: #0069b3;
+  font-weight: 100; }
+
+.reveal .slides section {
+  text-align: left;
+  background-color: #fff;
+  height: 100%; }
+
+.reveal .slides section.content {
+  padding: 0 6%;
+  box-sizing: border-box; }
+  .reveal .slides section.content > h1 {
+    text-align: left;
+    font-size: 90px;
+    padding-bottom: 5.7vh;
+    padding-top: 30px;
+    height: 90px;
+    font-weight: bold;
+    color: #0069b3; }
 
 .reveal .slides section.chapter h1, .reveal .slides section.chapter h2, .reveal .slides section.chapter .author {
   color: #fff;
@@ -440,10 +457,12 @@ body {
   text-align: left; }
 
 .reveal .slides section.chapter h1 {
+  font-weight: bold;
   bottom: 42%;
-  font-size: 90px; }
+  font-size: 100px; }
 
 .reveal .slides section.chapter h2 {
+  font-weight: bold;
   top: 58%;
   height: 15%;
   font-size: 60px; }
@@ -457,16 +476,21 @@ body {
     width: 42%;
     text-align: left; }
   .reveal .slides section.title h1 {
+    color: #0069b3;
+    font-weight: bold;
     bottom: 42%;
     font-size: 90px; }
   .reveal .slides section.title h2 {
+    color: #0069b3;
+    font-weight: bold;
     top: 58%;
     height: 15%;
     font-size: 60px; }
   .reveal .slides section.title .author {
+    font-weight: 100;
     top: 74%;
     height: 11%;
-    font-size: 30px; }
+    font-size: 45px; }
   .reveal .slides section.title .frontimage {
     border: none;
     width: 50%;
