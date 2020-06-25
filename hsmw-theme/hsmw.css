@@ -334,8 +334,6 @@ div.footer-content, div.footer-chapter {
   margin: 0;
   width: 88%;
   position: absolute;
-  margin-left: 6%;
-  margin-right: 6%;
   bottom: 3%;
   overflow: hidden; }
   div.footer-content .image-wrapper, div.footer-chapter .image-wrapper {
