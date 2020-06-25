@@ -381,6 +381,9 @@ div.footer-content, div.footer-chapter {
     right: 16%;
     top: 46%; }
 
+div.footer-chapter {
+  margin-left: 6%; }
+
 p.header-end {
   width: 34%;
   height: 31%;
