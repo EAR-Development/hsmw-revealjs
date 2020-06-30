@@ -60,9 +60,6 @@ HEADER_AND_FOOTER = {
         `,
         "footer": `
    			<div class='footer-chapter'>
-    			<div class="institute-tag">
-    				SICIM - Theory and Application
-    			</div>
     			<div class='image-wrapper'>
     				<img src="hsmw-theme/img/logo.png">
     			</div>
@@ -82,9 +79,6 @@ HEADER_AND_FOOTER = {
    							class="placeholder-author"></span></div>
    					<div class="copyright">(c) <span class="placeholder-date"></span> Hochschule Mittweida</div>
    				</div>
-    			<div class="institute-tag">
-    				SICIM - Theory and Application
-    			</div>
     			<div class='image-wrapper'>
     				<img src="hsmw-theme/img/logo.png">
     			</div>

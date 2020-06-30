@@ -344,11 +344,9 @@ div.footer-content, div.footer-chapter {
     div.footer-content .image-wrapper > img, div.footer-chapter .image-wrapper > img {
       padding: 0 0 0 20px;
       margin: 0;
-      border: 0;
       vertical-align: bottom;
       box-shadow: none;
-      height: 100%;
-      border-left: 2px solid #3465a4; }
+      height: 100%; }
   div.footer-content .left-info, div.footer-chapter .left-info {
     color: #3465a4;
     font-size: 20px;
@@ -373,13 +371,6 @@ div.footer-content, div.footer-chapter {
       color: gray;
       font-size: 16px;
       font-weight: bold; }
-  div.footer-content .institute-tag, div.footer-chapter .institute-tag {
-    font-size: 15px;
-    font-weight: bold;
-    color: #3465a4;
-    position: absolute;
-    right: 16%;
-    top: 46%; }
 
 div.footer-chapter {
   margin-left: 6%; }

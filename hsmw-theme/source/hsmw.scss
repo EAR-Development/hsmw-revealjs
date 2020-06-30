@@ -105,11 +105,9 @@ div.footer-content, div.footer-chapter{
         &>img{
             padding: 0 0 0 20px;
             margin: 0;
-            border: 0;
             vertical-align: bottom;
             box-shadow: none;
             height:100%;
-            border-left: 2px solid #3465a4;
         }
 	}
 
@@ -140,15 +138,6 @@ div.footer-content, div.footer-chapter{
 			font-size: 16px;
 			font-weight: bold;
 		}
-	}
-	
-	.institute-tag{
-		font-size: 15px;
-		font-weight: bold;
-		color: #3465a4;
-		position: absolute;
-		right: 16%;
-		top: 46%;
 	}
 }
 
