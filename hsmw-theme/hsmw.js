@@ -39,7 +39,10 @@ Reveal.initialize({
 	mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
 	config: 'TeX-AMS_HTML-full',
 
-    plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+	plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+	markdown: {
+   	 smartypants: true
+  	}
 });
 
 HEADER_AND_FOOTER = {

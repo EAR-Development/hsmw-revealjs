@@ -1,3 +1,3 @@
 <!-- .slide: class="chapter" -->
-# Chapter
-## Subtitle
+# The Art of cheese
+## About the what and the why
