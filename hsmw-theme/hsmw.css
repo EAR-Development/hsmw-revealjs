@@ -5,9 +5,15 @@
  * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
+@import url("https://fonts.googleapis.com/css?family=News + Cycle:400, 700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400, 700, 400italic, 700italic");
+section.has-dark-background,
+section.has-dark-background h1,
+section.has-dark-background h2,
+section.has-dark-background h3,
+section.has-dark-background h4,
+section.has-dark-background h5,
+section.has-dark-background h6 {
   color: #fff; }
 
 /*********************************************
@@ -33,7 +39,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --heading3-size: 1.55em;
   --heading4-size: 1em;
   --code-font: monospace;
-  --link-color: #00008B;
+  --link-color: #00008b;
   --link-color-hover: #0000f1;
   --selection-background-color: rgba(0, 0, 0, 0.99);
   --selection-color: #fff; }
@@ -240,7 +246,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008B;
+  color: #00008b;
   text-decoration: none;
   transition: color .15s ease; }
 
@@ -264,21 +270,21 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   transition: all .15s linear; }
 
 .reveal a:hover .r-frame {
-  border-color: #00008B;
+  border-color: #00008b;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #00008B; }
+  color: #00008b; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #00008B; }
+  color: #00008b; }
 
 /*********************************************
  * PRINT BACKGROUND
@@ -287,8 +293,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   .backgrounds {
     background-color: #fff; } }
 
-section {
-  top: 0; }
+section,
+.reveal .slides > section,
+.reveal .slides > section > section {
+  top: 0;
+  padding: 0; }
 
 p.header-title {
   position: absolute;
@@ -296,15 +305,12 @@ p.header-title {
   width: 100%;
   top: 0%;
   margin: 0%;
-  z-index: 1; }
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/clean_top.png); }
   p.header-title.esf {
-    background: url(img/esf_top.png);
-    background-repeat: no-repeat;
-    background-size: contain; }
-  p.header-title.no-esf {
-    background: url(img/clean_top.png);
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url(img/esf_top.png); }
 
 p.footer-title {
   width: 34%;
@@ -329,42 +335,49 @@ p.header-chapter {
   padding: 0;
   margin: 0; }
 
-div.footer-content, div.footer-chapter {
+div.footer-content,
+div.footer-chapter {
   height: 7%;
   margin: 0;
   width: 88%;
   position: absolute;
   bottom: 3%;
   overflow: hidden; }
-  div.footer-content .image-wrapper, div.footer-chapter .image-wrapper {
+  div.footer-content .image-wrapper,
+  div.footer-chapter .image-wrapper {
     position: absolute;
     right: 0;
     bottom: 0;
     height: 80%; }
-    div.footer-content .image-wrapper > img, div.footer-chapter .image-wrapper > img {
+    div.footer-content .image-wrapper > img,
+    div.footer-chapter .image-wrapper > img {
       padding: 0 0 0 20px;
       margin: 0;
       vertical-align: bottom;
       box-shadow: none;
       height: 100%; }
-  div.footer-content .left-info, div.footer-chapter .left-info {
+  div.footer-content .left-info,
+  div.footer-chapter .left-info {
     color: #3465a4;
     font-size: 20px;
     position: absolute;
     left: 0;
     width: 50%;
     height: 100%; }
-    div.footer-content .left-info .pagenumber, div.footer-chapter .left-info .pagenumber {
+    div.footer-content .left-info .pagenumber,
+    div.footer-chapter .left-info .pagenumber {
       position: absolute;
       left: 0;
       font-size: 28px;
       bottom: 15%; }
-    div.footer-content .left-info .title, div.footer-chapter .left-info .title {
+    div.footer-content .left-info .title,
+    div.footer-chapter .left-info .title {
       position: absolute;
       font-weight: bold;
       left: 15%;
       bottom: 24%; }
-    div.footer-content .left-info .copyright, div.footer-chapter .left-info .copyright {
+    div.footer-content .left-info .copyright,
+    div.footer-chapter .left-info .copyright {
       position: absolute;
       left: 15%;
       bottom: 0%;
@@ -401,7 +414,7 @@ p.footer-end {
   margin: 0; }
 
 body {
-  background-color: #FFF; }
+  background-color: #fff; }
 
 .reveal .slides ul {
   margin: 0;
@@ -428,10 +441,18 @@ body {
   background-color: #fff;
   height: 100%; }
 
-.reveal .slides section.content {
+.reveal .slides section.content,
+.reveal .slides section.single,
+.reveal .slides section.one_image,
+.reveal .slides section.two_images,
+.reveal .slides section.three_images {
   padding: 0 6%;
   box-sizing: border-box; }
-  .reveal .slides section.content > h1 {
+  .reveal .slides section.content > h1,
+  .reveal .slides section.single > h1,
+  .reveal .slides section.one_image > h1,
+  .reveal .slides section.two_images > h1,
+  .reveal .slides section.three_images > h1 {
     text-align: left;
     font-size: 90px;
     padding-bottom: 5.7vh;
@@ -440,7 +461,44 @@ body {
     font-weight: bold;
     color: #0069b3; }
 
-.reveal .slides section.chapter h1, .reveal .slides section.chapter h2, .reveal .slides section.chapter .author {
+.reveal .slides section.single p.single_wrapper {
+  height: 70%;
+  text-align: center; }
+  .reveal .slides section.single p.single_wrapper > img {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    object-fit: cover; }
+
+.reveal .slides section.one_image {
+  padding-right: 52%; }
+  .reveal .slides section.one_image h1 {
+    margin-right: -100%;
+    margin-bottom: 50px; }
+  .reveal .slides section.one_image p.one_image_wrapper {
+    width: 53%;
+    height: 70%;
+    position: absolute;
+    right: -3%;
+    top: 20%;
+    margin: 0; }
+    .reveal .slides section.one_image p.one_image_wrapper > img {
+      width: auto;
+      min-height: 100%;
+      margin: 0;
+      object-fit: cover; }
+  .reveal .slides section.one_image .one_image_bg {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    height: 70%;
+    background-color: #e5f0f7;
+    z-index: -1; }
+
+.reveal .slides section.chapter h1,
+.reveal .slides section.chapter h2,
+.reveal .slides section.chapter .author {
   color: #fff;
   position: absolute;
   left: 6%;
@@ -461,7 +519,9 @@ body {
 
 .reveal .slides section.title {
   background-color: #e5f0f7; }
-  .reveal .slides section.title h1, .reveal .slides section.title h2, .reveal .slides section.title .author {
+  .reveal .slides section.title h1,
+  .reveal .slides section.title h2,
+  .reveal .slides section.title .author {
     position: absolute;
     left: 6%;
     margin: 0;
@@ -495,7 +555,11 @@ body {
     color: rgba(0, 0, 0, 0);
     background-size: cover; }
 
-.reveal .slides section.end h1, .reveal .slides section.end h2, .reveal .slides section.end h3, .reveal .slides section.end h4, .reveal .slides section.end .author {
+.reveal .slides section.end h1,
+.reveal .slides section.end h2,
+.reveal .slides section.end h3,
+.reveal .slides section.end h4,
+.reveal .slides section.end .author {
   color: #fff;
   position: absolute;
   left: 6%;
@@ -541,6 +605,3 @@ body {
   color: rgba(0, 0, 0, 0);
   background-size: cover;
   z-index: 0; }
-
-.reveal .slides > section, .reveal .slides > section > section {
-  padding: 0; }

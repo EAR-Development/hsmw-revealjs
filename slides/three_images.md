@@ -1,5 +1,4 @@
 # Uses of Cheese
-<!-- .slide: class="content" -->
 
 ![raw cheese](slides/img/three_images_1.jpg)
 ![cheese on pizza](slides/img/three_images_2.jpg)

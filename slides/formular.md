@@ -1,4 +1,3 @@
-<!-- .slide: class="content" -->
 # Cheese Formular
 
 - Features are chosen from cheese research

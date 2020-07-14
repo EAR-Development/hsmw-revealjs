@@ -6,82 +6,104 @@
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 
-
 // Default mixins and settings -----------------
 @import "template/mixins";
 @import "template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-
+@import url("https://fonts.googleapis.com/css?family=News + Cycle:400, 700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400, 700, 400italic, 700italic");
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Open Sans', sans-serif;
+$mainFont: "Open Sans", sans-serif;
 $mainColor: rgb(10, 9, 9);
-$headingFont: 'Open Sans', Impact, sans-serif;
+$headingFont: "Open Sans", Impact, sans-serif;
 $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $backgroundColor: #fff;
-$linkColor: #00008B;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColor: #00008b;
+$linkColorHover: lighten($linkColor, 20%);
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 section.has-dark-background {
-	&, h1, h2, h3, h4, h5, h6 {
+	&,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: #fff;
 	}
 }
-
 
 // Theme template ------------------------------
 @import "template/theme";
 // ---------------------------------------------
 
-section{
-	top:0;
+// ---------------------------------------------
+// 	   ██   ██ ███████ ███    ███ ██     ██
+// 	   ██   ██ ██      ████  ████ ██     ██
+// 	   ███████ ███████ ██ ████ ██ ██  █  ██
+// 	   ██   ██      ██ ██  ██  ██ ██ ███ ██
+// 	   ██   ██ ███████ ██      ██  ███ ███
+// ---------------------------------------------
+
+// Normalize -----------------------------------
+section,
+.reveal .slides > section,
+.reveal .slides > section > section {
+	top: 0;
+	padding: 0;
 }
 
+// ---------------------------------------------
+// 				 SLIDE TYPES
+// ---------------------------------------------
+// Title: First Slide in Deck, shows Title and
+//        author
+// Content: Simple Slide, that shows text
+
+// Title ---------------------------------------
 p.header-title {
-	&.esf {
-		background: url(img/esf_top.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
-	&.no-esf {
-		background: url(img/clean_top.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
 	position: absolute;
 	height: 35%;
 	width: 100%;
 	top: 0%;
 	margin: 0%;
+
 	z-index: 1;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	background-image: url(img/clean_top.png);
+
+	// acknowledgment Logos if necessary
+	&.esf {
+		background-image: url(img/esf_top.png);
+	}
 }
 
-p.footer-title{
-width: 34%;
-height: 20%;
-display: block;
-background: url(img/bottom_right.png);
-background-repeat: no-repeat;
-background-size: cover;
-position: absolute;
-bottom: 0%;
-right: 0%;
-margin: 0;
+p.footer-title {
+	width: 34%;
+	height: 20%;
+	display: block;
+	background: url(img/bottom_right.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	margin: 0;
 }
 
-p.header-chapter{
+p.header-chapter {
 	width: 67%;
 	height: 100%;
 	position: absolute;
-	left:0;
+	left: 0;
 	top: 0;
 	z-index: -1;
 	background-color: #0069b3;
@@ -89,48 +111,51 @@ p.header-chapter{
 	margin: 0;
 }
 
-div.footer-content, div.footer-chapter{
-    height: 7%;
-    margin: 0;
-    width: 88%;
-    position: absolute;
-    bottom: 3%;
-	overflow: hidden;	
-	
-	.image-wrapper{
+// Content -------------------------------------
+
+div.footer-content,
+div.footer-chapter {
+	height: 7%;
+	margin: 0;
+	width: 88%;
+	position: absolute;
+	bottom: 3%;
+	overflow: hidden;
+
+	.image-wrapper {
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		height: 80%;
-        &>img{
-            padding: 0 0 0 20px;
-            margin: 0;
-            vertical-align: bottom;
-            box-shadow: none;
-            height:100%;
-        }
+		& > img {
+			padding: 0 0 0 20px;
+			margin: 0;
+			vertical-align: bottom;
+			box-shadow: none;
+			height: 100%;
+		}
 	}
 
-	.left-info{
-        color: #3465a4;
-        font-size: 20px;
+	.left-info {
+		color: #3465a4;
+		font-size: 20px;
 		position: absolute;
 		left: 0;
 		width: 50%;
 		height: 100%;
-		.pagenumber{
+		.pagenumber {
 			position: absolute;
 			left: 0;
 			font-size: 28px;
 			bottom: 15%;
 		}
-		.title{
+		.title {
 			position: absolute;
 			font-weight: bold;
 			left: 15%;
 			bottom: 24%;
 		}
-		.copyright{
+		.copyright {
 			position: absolute;
 			left: 15%;
 			bottom: 0%;
@@ -141,10 +166,9 @@ div.footer-content, div.footer-chapter{
 	}
 }
 
-div.footer-chapter{
+div.footer-chapter {
 	margin-left: 6%;
 }
-
 
 p.header-end {
 	width: 34%;
@@ -160,7 +184,7 @@ p.header-end {
 	z-index: 1;
 }
 
-p.footer-end{
+p.footer-end {
 	width: 34%;
 	height: 20%;
 	display: block;
@@ -173,23 +197,23 @@ p.footer-end{
 	margin: 0;
 }
 
-body{
-	background-color: #FFF;
+body {
+	background-color: #fff;
 }
 
-.reveal .slides{
+.reveal .slides {
 	ul {
 		margin: 0;
 		list-style: none;
-		padding-left: 0
+		padding-left: 0;
 	}
 	ul ul {
 		margin-left: 0.5em;
 	}
-	ul ul ul{
+	ul ul ul {
 		font-size: 0.9em;
 	}
-	ul ul ul ul ul{
+	ul ul ul ul ul {
 		font-weight: bold;
 	}
 
@@ -198,31 +222,76 @@ body{
 		padding-right: 1em;
 		color: #0069b3;
 		font-weight: 100;
-
 	}
 	section {
 		text-align: left;
 		background-color: #fff;
 		height: 100%;
 	}
-	section.content{
+	section.content,
+	section.single,
+	section.one_image,
+	section.two_images,
+	section.three_images {
 		padding: 0 6%;
-		box-sizing: border-box;;
-		&>p{
-		}
-		&>h1{
+		box-sizing: border-box;
+		& > h1 {
 			text-align: left;
 			font-size: 90px;
-    		padding-bottom: 5.7vh;
-    		padding-top: 30px;
+			padding-bottom: 5.7vh;
+			padding-top: 30px;
 			height: 90px;
 			font-weight: bold;
 			color: #0069b3;
 		}
 	}
-	
-	section.chapter{
-		h1, h2, .author{
+
+	section.single p.single_wrapper {
+		height: 70%;
+		text-align: center;
+		& > img {
+			min-width: 100%;
+			min-height: 100%;
+			margin: 0;
+			object-fit: cover;
+		}
+	}
+
+	section.one_image {
+		padding-right: 52%;
+		h1 {
+			margin-right: -100%;
+			margin-bottom: 50px;
+		}
+		p.one_image_wrapper {
+			width: 53%;
+			height: 70%;
+			position: absolute;
+			right: -3%;
+			top: 20%;
+			margin: 0;
+			& > img {
+				width: auto;
+				min-height: 100%;
+				margin: 0;
+				object-fit: cover;
+			}
+		}
+		.one_image_bg {
+			position: absolute;
+			left: 0;
+			top: 20%;
+			width: 100%;
+			height: 70%;
+			background-color: #e5f0f7;
+			z-index: -1;
+		}
+	}
+
+	section.chapter {
+		h1,
+		h2,
+		.author {
 			color: #fff;
 			position: absolute;
 			left: 6%;
@@ -230,62 +299,68 @@ body{
 			width: 42%;
 			text-align: left;
 		}
-		h1{
+		h1 {
 			font-weight: bold;
 			bottom: 42%;
 			font-size: 100px;
 		}
-		h2{
+		h2 {
 			font-weight: bold;
 			top: 58%;
 			height: 15%;
-			font-size: 60px
+			font-size: 60px;
 		}
 	}
 
-	section.title{
+	section.title {
 		background-color: #e5f0f7;
-		h1, h2, .author{
+		h1,
+		h2,
+		.author {
 			position: absolute;
 			left: 6%;
 			margin: 0;
 			width: 42%;
 			text-align: left;
 		}
-		h1{
+		h1 {
 			color: #0069b3;
 			font-weight: bold;
 			bottom: 42%;
 			font-size: 90px;
 		}
-		h2{
+		h2 {
 			color: #0069b3;
 			font-weight: bold;
 			top: 58%;
 			height: 15%;
 			font-size: 60px;
 		}
-		.author{
+		.author {
 			font-weight: 100;
 			top: 74%;
 			height: 11%;
 			font-size: 45px;
 		}
-		.frontimage{
+		.frontimage {
 			border: none;
 			width: 50%;
 			height: 100%;
 			position: absolute;
 			background-image: url(img/background_mock.jpg);
-  			margin: 0;
+			margin: 0;
 			right: 0%;
 			top: 0;
-    		color: rgba(0,0,0,0);
+			color: rgba(0, 0, 0, 0);
 			background-size: cover;
 		}
 	}
-	section.end{
-		h1, h2, h3, h4, .author{
+	section.end {
+		h1,
+		h2,
+		h3,
+		h4,
+		.author {
 			color: #fff;
 			position: absolute;
 			left: 6%;
@@ -294,53 +369,48 @@ body{
 			text-align: left;
 			z-index: 1;
 		}
-		h1{
+		h1 {
 			font-weight: bold;
 			bottom: 52%;
 			font-size: 110px;
 		}
 
-		h2{
+		h2 {
 			top: 52%;
 			height: 15%;
 			font-size: 30px;
 		}
 
-		h3{
+		h3 {
 			top: 56%;
 			height: 15%;
 			font-size: 30px;
 		}
 
-		h4{
+		h4 {
 			top: 62%;
 			height: 15%;
 			font-size: 20px;
 		}
 
-		.author{
+		.author {
 			top: 74%;
 			height: 11%;
 			font-size: 30px;
 		}
-		
-		.endimage{
+
+		.endimage {
 			border: none;
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			background-image: url(img/background_cube.png);
-  			margin: 0;
+			margin: 0;
 			right: 0%;
 			top: 0;
-    		color: rgba(0,0,0,0);
+			color: rgba(0, 0, 0, 0);
 			background-size: cover;
 			z-index: 0;
 		}
 	}
-}
-
-
-.reveal .slides > section, .reveal .slides > section > section {
-	padding: 0; 
 }

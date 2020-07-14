@@ -1,4 +1,3 @@
-<!-- .slide: class="content" -->
 # Cheese: The secret king of the world
 
 ![Cheese and Stone](slides/img/one_image.jpg)

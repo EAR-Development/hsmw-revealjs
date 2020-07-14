@@ -1,4 +1,3 @@
-<!-- .slide: class="content" -->
 # Say Cheese!
 
 |                 | Old Model I | Old Model II | Competitor | Our Model |

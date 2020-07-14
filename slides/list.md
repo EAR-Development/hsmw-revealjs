@@ -1,4 +1,3 @@
-<!-- .slide: class="content" -->
 # List of cheeses
 - Afrika
     - Benin
