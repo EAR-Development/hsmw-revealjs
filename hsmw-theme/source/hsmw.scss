@@ -99,22 +99,48 @@ p.footer-title {
 	margin: 0;
 }
 
-p.header-chapter {
-	width: 67%;
-	height: 100%;
+div.chapter_block {
+	width: 33%;
+	height: 50%;
 	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
-	background-color: #0069b3;
 	padding: 0;
 	margin: 0;
 }
 
+div.chapter_0_0 {
+	background-color: #add3e6;
+	left: 0;
+	top: 0;
+}
+div.chapter_0_1 {
+	background-color: #e4f0f6;
+	left: 33%;
+	top: 0;
+}
+div.chapter_0_2 {
+	background-color: #f7fafc;
+	left: 66%;
+	top: 0;
+}
+div.chapter_1_0 {
+	background-color: #e4f0f6;
+	left: 0;
+	top: 50%;
+}
+div.chapter_1_1 {
+	background-color: #f7fafc;
+	left: 33%;
+	top: 50%;
+}
+div.chapter_1_2 {
+	background-color: #e4f0f6;
+	left: 66%;
+	top: 50%;
+}
+
 // Content -------------------------------------
 
-div.footer-content,
-div.footer-chapter {
+div.footer-content {
 	height: 7%;
 	margin: 0;
 	width: 88%;
@@ -164,10 +190,6 @@ div.footer-chapter {
 			font-weight: bold;
 		}
 	}
-}
-
-div.footer-chapter {
-	margin-left: 6%;
 }
 
 p.header-end {
@@ -246,7 +268,7 @@ body {
 		}
 	}
 
-	section.single p.single_wrapper {
+	section.single .single_wrapper {
 		height: 70%;
 		text-align: center;
 		& > img {
@@ -288,25 +310,60 @@ body {
 		}
 	}
 
+	section.three_images {
+		p.three_images_wrapper {
+			height: 40%;
+			position: absolute;
+			bottom: 10%;
+			width: 100%;
+			margin-left: -5%;
+			& > img {
+				width: 33%;
+				min-height: 100%;
+				margin: 0;
+				object-fit: cover;
+				position: absolute;
+				&:nth-child(1) {
+					width: 28%;
+					left: 5%;
+				}
+				&:nth-child(2) {
+					left: 33%;
+				}
+				&:nth-child(3) {
+					left: 66%;
+				}
+			}
+		}
+		.bg {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 33%;
+			height: 70%;
+			background-color: #e5f0f7;
+			z-index: -1;
+		}
+	}
+
 	section.chapter {
 		h1,
-		h2,
-		.author {
-			color: #fff;
+		h2 {
 			position: absolute;
 			left: 6%;
 			margin: 0;
-			width: 42%;
+			width: 100%;
 			text-align: left;
+			color: #0069b3;
 		}
 		h1 {
 			font-weight: bold;
-			bottom: 42%;
+			bottom: 52%;
 			font-size: 100px;
 		}
 		h2 {
 			font-weight: bold;
-			top: 58%;
+			top: 52%;
 			height: 15%;
 			font-size: 60px;
 		}

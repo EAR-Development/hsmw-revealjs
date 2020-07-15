@@ -1,0 +1,81 @@
+# The Art of cheese
+## About the what and the why
+
+---
+
+# Enter the cheese cellar
+
+![Cheese cellar](slides/img/single.jpg)
+
+---
+
+# Cheese: The secret king of the world
+
+![Cheese and Stone](slides/img/one_image.jpg)
+
+- Cheese was created 4,000 years ago and has been going strong ever since.
+- It’s a myth that mice like cheese. They much prefer peanut butter due to the high moisture content.
+- A ‘cheesemonger’ is someone who sells cheese for a living
+
+--- 
+
+# Uses of Cheese
+
+![raw cheese](slides/img/three_images_1.jpg)
+![cheese on pizza](slides/img/three_images_2.jpg)
+![cheese fondue](slides/img/three_images_3.jpg)
+
+Popular uses are:
+1. Raw Cheese
+2. Pizza
+3. Fondue
+
+---
+
+# List of cheeses
+- Afrika
+    - Benin
+        - Wagasi
+- Europe
+    - Germany
+        - Backstein
+        - Handkäse
+            - Similar to Harzer
+                - Not to confuse with Hartzer
+                  
+---
+
+# Cheese Formular
+
+- Features are chosen from cheese research
+    - **Staps** satisfaction coeficient: `$S_{staps}$`
+    - *„Only way to measure the customer experience at a cheese reseller store"*
+
+`$$S_{staps} = 0.4 x_{holes} + x_{yellow} - 0.1 x_{hardness}$$`
+
+with
+
+`$x_{holes}$` ...average hole coverage
+
+`$x_{yellow}$` ...**Snow**‘s eat-or-not-to-eat scale
+
+`$x_{hardness}$` ...Like-diamond scheme
+
+---
+
+# Cheesy diagrams
+
+TODO: implement diagram drawing
+
+---
+
+# Say Cheese!
+
+|                 | Old Model I | Old Model II | Competitor | Our Model |
+| --------------- | ----------- | ------------ | ---------- | --------- |
+| Toy             | 0,856       | 0,795        | 0,884      | 0,985     |
+| Unimportant     | 0,613       | 0,600        | 0,953      | 0,856     |
+| Self created I  | 0,563       | 0,765        | 0,805      | 0,955     |
+| Self created II | 0,643       | 0,531        | 0,756      | 0,988     |
+| Real problem    | 0,513       | 0,533        | 0,600      | 0,610     |
+    

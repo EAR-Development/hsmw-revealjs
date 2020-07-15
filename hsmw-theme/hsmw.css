@@ -324,69 +324,85 @@ p.footer-title {
   right: 0%;
   margin: 0; }
 
-p.header-chapter {
-  width: 67%;
-  height: 100%;
+div.chapter_block {
+  width: 33%;
+  height: 50%;
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  background-color: #0069b3;
   padding: 0;
   margin: 0; }
 
-div.footer-content,
-div.footer-chapter {
+div.chapter_0_0 {
+  background-color: #add3e6;
+  left: 0;
+  top: 0; }
+
+div.chapter_0_1 {
+  background-color: #e4f0f6;
+  left: 33%;
+  top: 0; }
+
+div.chapter_0_2 {
+  background-color: #f7fafc;
+  left: 66%;
+  top: 0; }
+
+div.chapter_1_0 {
+  background-color: #e4f0f6;
+  left: 0;
+  top: 50%; }
+
+div.chapter_1_1 {
+  background-color: #f7fafc;
+  left: 33%;
+  top: 50%; }
+
+div.chapter_1_2 {
+  background-color: #e4f0f6;
+  left: 66%;
+  top: 50%; }
+
+div.footer-content {
   height: 7%;
   margin: 0;
   width: 88%;
   position: absolute;
   bottom: 3%;
   overflow: hidden; }
-  div.footer-content .image-wrapper,
-  div.footer-chapter .image-wrapper {
+  div.footer-content .image-wrapper {
     position: absolute;
     right: 0;
     bottom: 0;
     height: 80%; }
-    div.footer-content .image-wrapper > img,
-    div.footer-chapter .image-wrapper > img {
+    div.footer-content .image-wrapper > img {
       padding: 0 0 0 20px;
       margin: 0;
       vertical-align: bottom;
       box-shadow: none;
       height: 100%; }
-  div.footer-content .left-info,
-  div.footer-chapter .left-info {
+  div.footer-content .left-info {
     color: #3465a4;
     font-size: 20px;
     position: absolute;
     left: 0;
     width: 50%;
     height: 100%; }
-    div.footer-content .left-info .pagenumber,
-    div.footer-chapter .left-info .pagenumber {
+    div.footer-content .left-info .pagenumber {
       position: absolute;
       left: 0;
       font-size: 28px;
       bottom: 15%; }
-    div.footer-content .left-info .title,
-    div.footer-chapter .left-info .title {
+    div.footer-content .left-info .title {
       position: absolute;
       font-weight: bold;
       left: 15%;
       bottom: 24%; }
-    div.footer-content .left-info .copyright,
-    div.footer-chapter .left-info .copyright {
+    div.footer-content .left-info .copyright {
       position: absolute;
       left: 15%;
       bottom: 0%;
       color: gray;
       font-size: 16px;
       font-weight: bold; }
-
-div.footer-chapter {
-  margin-left: 6%; }
 
 p.header-end {
   width: 34%;
@@ -461,10 +477,10 @@ body {
     font-weight: bold;
     color: #0069b3; }
 
-.reveal .slides section.single p.single_wrapper {
+.reveal .slides section.single .single_wrapper {
   height: 70%;
   text-align: center; }
-  .reveal .slides section.single p.single_wrapper > img {
+  .reveal .slides section.single .single_wrapper > img {
     min-width: 100%;
     min-height: 100%;
     margin: 0;
@@ -496,24 +512,52 @@ body {
     background-color: #e5f0f7;
     z-index: -1; }
 
+.reveal .slides section.three_images p.three_images_wrapper {
+  height: 40%;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  margin-left: -5%; }
+  .reveal .slides section.three_images p.three_images_wrapper > img {
+    width: 33%;
+    min-height: 100%;
+    margin: 0;
+    object-fit: cover;
+    position: absolute; }
+    .reveal .slides section.three_images p.three_images_wrapper > img:nth-child(1) {
+      width: 28%;
+      left: 5%; }
+    .reveal .slides section.three_images p.three_images_wrapper > img:nth-child(2) {
+      left: 33%; }
+    .reveal .slides section.three_images p.three_images_wrapper > img:nth-child(3) {
+      left: 66%; }
+
+.reveal .slides section.three_images .bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 33%;
+  height: 70%;
+  background-color: #e5f0f7;
+  z-index: -1; }
+
 .reveal .slides section.chapter h1,
-.reveal .slides section.chapter h2,
-.reveal .slides section.chapter .author {
-  color: #fff;
+.reveal .slides section.chapter h2 {
   position: absolute;
   left: 6%;
   margin: 0;
-  width: 42%;
-  text-align: left; }
+  width: 100%;
+  text-align: left;
+  color: #0069b3; }
 
 .reveal .slides section.chapter h1 {
   font-weight: bold;
-  bottom: 42%;
+  bottom: 52%;
   font-size: 100px; }
 
 .reveal .slides section.chapter h2 {
   font-weight: bold;
-  top: 58%;
+  top: 52%;
   height: 15%;
   font-size: 60px; }
 

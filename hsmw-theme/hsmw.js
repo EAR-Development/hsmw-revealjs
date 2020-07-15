@@ -67,14 +67,15 @@ const HEADER_AND_FOOTER = {
 	},
 	"chapter": {
 		"header": `
-	    	<p class='header-chapter'>
-			</p>
+			<div class="chapter_block chapter_0_0"></div>
+			<div class="chapter_block chapter_0_1"></div>
+			<div class="chapter_block chapter_0_2"></div>
+			<div class="chapter_block chapter_1_0"></div>
+			<div class="chapter_block chapter_1_1"></div>
+			<div class="chapter_block chapter_1_2"></div>
         `,
 		"footer": `
-   			<div class='footer-chapter'>
-    			<div class='image-wrapper'>
-    				<img src="hsmw-theme/img/logo.png">
-    			</div>
+			<div class='footer-chapter'>
     		</div>
         `
 	},
@@ -141,6 +142,13 @@ function detect_slide_style() {
 		}
 		if (img_count == 3) {
 			detected_class = 'three_images'
+			// Apply Helper Classes
+			$(section).children('p').each(function (_, p) {
+				if ($(p).find('img').length == 3) {
+					$(p).addClass('three_images_wrapper')
+				}
+			})
+			$(section).append('<div class="bg"></div>')
 		}
 		if (non_title_objects == 0) {
 			detected_class = 'chapter'
