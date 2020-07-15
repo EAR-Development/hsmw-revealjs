@@ -471,3 +471,39 @@ body {
 		}
 	}
 }
+
+// ---------------------------------------------
+// 				 TABLE STYLE
+// ---------------------------------------------
+table {
+	width: 100%;
+	color: #006cae;
+}
+
+thead {
+	border-bottom: 10px solid white;
+}
+
+th,
+td:nth-child(1) {
+	background-color: #006cae;
+	color: white;
+	border: white 1px solid;
+	font-weight: bold;
+}
+
+td {
+	border: white 3px solid;
+}
+
+tr {
+	border: white 3px solid;
+}
+
+tr:nth-child(odd) {
+	background-color: #c9d4e4;
+}
+
+tr:nth-child(even) {
+	background-color: #e6ebf1;
+}
