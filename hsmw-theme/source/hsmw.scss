@@ -428,31 +428,25 @@ body {
 		}
 		h1 {
 			font-weight: bold;
-			bottom: 52%;
+			top: 10%;
 			font-size: 110px;
 		}
 
 		h2 {
-			top: 52%;
+			top: 30%;
 			height: 15%;
 			font-size: 30px;
 		}
 
 		h3 {
-			top: 56%;
+			top: 33%;
 			height: 15%;
 			font-size: 30px;
 		}
 
 		h4 {
-			top: 62%;
+			top: 37%;
 			height: 15%;
-			font-size: 20px;
-		}
-
-		.author {
-			top: 74%;
-			height: 11%;
 			font-size: 30px;
 		}
 
@@ -468,6 +462,15 @@ body {
 			color: rgba(0, 0, 0, 0);
 			background-size: cover;
 			z-index: 0;
+		}
+
+		.info {
+			position: absolute;
+			z-index: 5;
+			color: white;
+			bottom: 10%;
+			left: 6%;
+			font-size: 30px;
 		}
 	}
 }

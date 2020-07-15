@@ -614,27 +614,22 @@ body {
 
 .reveal .slides section.end h1 {
   font-weight: bold;
-  bottom: 52%;
+  top: 10%;
   font-size: 110px; }
 
 .reveal .slides section.end h2 {
-  top: 52%;
+  top: 30%;
   height: 15%;
   font-size: 30px; }
 
 .reveal .slides section.end h3 {
-  top: 56%;
+  top: 33%;
   height: 15%;
   font-size: 30px; }
 
 .reveal .slides section.end h4 {
-  top: 62%;
+  top: 37%;
   height: 15%;
-  font-size: 20px; }
-
-.reveal .slides section.end .author {
-  top: 74%;
-  height: 11%;
   font-size: 30px; }
 
 .reveal .slides section.end .endimage {
@@ -649,6 +644,14 @@ body {
   color: rgba(0, 0, 0, 0);
   background-size: cover;
   z-index: 0; }
+
+.reveal .slides section.end .info {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  bottom: 10%;
+  left: 6%;
+  font-size: 30px; }
 
 table {
   width: 100%;
