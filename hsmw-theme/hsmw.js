@@ -21,11 +21,17 @@ $('body').append(`
 	</div
 `)
 
-$('.slides').append(make_slide('hsmw-theme', 'title'))
+var scripts = document.getElementsByTagName("script"),
+	src = scripts[scripts.length - 1].src,
+	path = src.substring(0, src.lastIndexOf('/'));
+
+$('.slides').append(make_slide(path, 'title'))
 for (slide of SLIDES) {
 	$('.slides').append(make_slide('slides', slide))
 }
-$('.slides').append(make_slide('hsmw-theme', 'end'))
+if (THANK_YOU) {
+	$('.slides').append(make_slide(path, 'end'))
+}
 
 // Initialize RevealJS After building the Deck
 Reveal.initialize({
@@ -93,7 +99,7 @@ const HEADER_AND_FOOTER = {
    					<div class="copyright">(c) <span class="placeholder-date"></span> Hochschule Mittweida</div>
    				</div>
     			<div class='image-wrapper'>
-    				<img src="hsmw-theme/img/logo.png">
+					<img src="`+ path + `/img/logo.png">
     			</div>
     		</div>
         `
