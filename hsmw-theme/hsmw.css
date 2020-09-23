@@ -508,7 +508,6 @@ body {
     top: 20%;
     width: 100%;
     height: 70%;
-    background-color: #e5f0f7;
     z-index: -1; }
 
 .reveal .slides section.three_images p.three_images_wrapper {
@@ -537,7 +536,6 @@ body {
   top: 0;
   width: 33%;
   height: 70%;
-  background-color: #e5f0f7;
   z-index: -1; }
 
 .reveal .slides section.chapter h1,
