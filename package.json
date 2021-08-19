@@ -19,11 +19,14 @@
     "presentation"
   ],
   "devDependencies": {
+    "glob-parent": ">=5.1.2",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
-    "gulp-sass": "^5.0.0",
     "gulp-run-command": "0.0.10",
-    "gulp-shell": "^0.8.0"
+    "gulp-sass": "^5.0.0",
+    "gulp-shell": "^0.8.0",
+    "yargs": "^17.1.1",
+    "yargs-parser": ">=5.0.1"
   },
   "dependencies": {
     "jquery": "^3.6.0",
