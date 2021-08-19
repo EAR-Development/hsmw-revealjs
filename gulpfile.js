@@ -1,7 +1,7 @@
 const yargs = require('yargs')
 
 const gulp = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const connect = require('gulp-connect')
 
 const shell = require('gulp-shell')
