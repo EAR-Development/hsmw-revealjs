@@ -141,7 +141,8 @@ function detect_slide_style() {
 					$(p).addClass('one_image_wrapper')
 				}
 			})
-			$(section).append('<div class="one_image_bg"></div>')
+			$(section).children(":not(h1,h2,.one_image_wrapper)").wrap('<p class="one_image_text"></p>')
+			// $(section).append('<div class="one_image_bg"></div>')
 		}
 		if (img_count == 2) {
 			detected_class = 'two_images'
@@ -154,7 +155,7 @@ function detect_slide_style() {
 					$(p).addClass('three_images_wrapper')
 				}
 			})
-			$(section).append('<div class="bg"></div>')
+			// $(section).append('<div class="bg"></div>')
 		}
 		if (non_title_objects == 0) {
 			detected_class = 'chapter'
@@ -163,6 +164,48 @@ function detect_slide_style() {
 		$(section).removeClass('default').addClass(detected_class)
 	})
 }
+
+function add_image_captions() {
+	let images = $("img")
+	images.each(function (_, image) {
+		let alt = image.alt
+		let source_split = alt.split("%src: ")
+
+		// Read Alternative Text
+		let caption = source_split[0]
+		let source = undefined
+
+		if (source_split.length == 2) {
+			source = source_split[1]
+		}
+
+		// Create Figure with Caption if necessary
+		let description_found = caption.startsWith("%%")
+
+
+		if (description_found || source !== undefined) {
+			wrapper = $(image).wrap("<figure></figure>").parent()
+			figure_caption = $("<figurecaption>")
+			wrapper.append(figure_caption)
+		}
+
+		if (description_found) {
+			caption = caption.slice(2).trim()
+			console.log("apply caption:", caption)
+			let description_caption = $('<p style="margin:0">')
+			description_caption.text(caption)
+			figure_caption.append(description_caption)
+		}
+
+		if (source !== undefined) {
+			console.log("apply source: ", source)
+			let source_caption = $('<p class="source-tag" style="margin:0">')
+			source_caption.text("Source: " + source)
+			figure_caption.append(source_caption)
+		}
+	})
+}
+
 
 function apply_slide_style() {
 	// Add Default marker
@@ -180,6 +223,9 @@ function apply_slide_style() {
 		$('section.' + template).prepend(HEADER_AND_FOOTER[template]['header']).removeClass('default');
 		$('section.' + template).append(HEADER_AND_FOOTER[template]['footer']).removeClass('default');
 	}
+
+	// Adjust Elements
+	add_image_captions()
 }
 
 function apply_acknoledgement(params) {

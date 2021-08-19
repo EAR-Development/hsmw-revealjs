@@ -222,6 +222,23 @@ body {
 	background-color: #fff;
 }
 
+
+html.print-pdf .reveal .slides{
+	p.one_image_text {
+		width: 47%;
+	}
+	section.content,
+	section.single,
+	section.one_image,
+	section.two_images,
+	section.three_images {
+		padding: 0 6%!important;
+	}
+	h1{
+		margin: 0;
+	}
+}
+
 .reveal .slides {
 	ul {
 		margin: 0;
@@ -271,12 +288,44 @@ body {
 	section.single .single_wrapper {
 		height: 70%;
 		text-align: center;
-		& > img {
+		line-height: 0;
+	
+		&  img {
 			min-width: 100%;
 			min-height: 100%;
 			margin: 0;
 			object-fit: cover;
 		}
+		&  img[src$='#contain'] { 
+			object-fit: contain;
+		}
+
+		& figure {
+			height: 100%;
+			text-align: left;
+			margin: 0;
+
+			& img {
+				min-height: 90%;
+				max-height: 90%;
+			}
+
+			figurecaption {
+				box-sizing: border-box;
+				font-size: 0.5em;
+			    background-color: #add3e6;
+				display: block;
+				width: 100%;
+				padding: 5px 0;
+				padding-left: 10px;
+
+				& .source-tag{
+					font-size: 0.8em;
+					font-weight: 100;
+				}
+			}
+		}
+
 	}
 
 	section.one_image {
@@ -299,6 +348,7 @@ body {
 				object-fit: cover;
 			}
 		}
+
 		.one_image_bg {
 			position: absolute;
 			left: 0;
@@ -306,6 +356,7 @@ body {
 			width: 100%;
 			height: 70%;
 			z-index: -1;
+			background-color: #add3e6;
 		}
 	}
 
