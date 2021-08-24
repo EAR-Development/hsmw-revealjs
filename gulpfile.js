@@ -40,6 +40,6 @@ gulp.task('pdf', () => {
 
     return gulp
         .src('index.html', { 'read': false })
-        .pipe(shell(['decktape http://0.0.0.0:' + port + ' output.pdf']))
+        .pipe(shell(['decktape --size="1920x1080" http://0.0.0.0:' + port + ' output.pdf']))
         .on('end', () => connect.serverClose())
 })
